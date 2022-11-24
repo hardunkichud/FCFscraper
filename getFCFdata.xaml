@@ -1,0 +1,307 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="getFCFdata" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1390,3633" sap2010:WorkflowViewState.IdRef="getFCFdata_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="49">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="60">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="getFCFdata" sap:VirtualizedContainerService.HintSize="1400,3568" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1338,3290" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" LaunchTimeout="1000000">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="1304,3194" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="Get spreadsheet from CSV download link from Nasdaq screener: https://www.nasdaq.com/market-activity/stocks/screener Save as .xlsx" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1242,3072" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" KeepExcelFileOpen="True" ResizeWindow="None" WorkbookPath="ALL_BUT_NANO.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Use Stock File" sap:VirtualizedContainerService.HintSize="1208,2759" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:RenameSheetX sap2010:Annotation.AnnotationText="Renames sheet to data." DisplayName="Rename Sheet" From="[Excel.SelectedSheet]" sap:VirtualizedContainerService.HintSize="1146,180" sap2010:WorkflowViewState.IdRef="RenameSheetX_1" To="data">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:RenameSheetX>
+                    <ueab:FindReplaceValueX FoundAt="{x:Null}" sap2010:Annotation.AnnotationText="Cleans Symbold data to make it readable by yahoo finance." DisplayName="Find/Replace Value" sap:VirtualizedContainerService.HintSize="1146,278" sap2010:WorkflowViewState.IdRef="FindReplaceValueX_1" LookIn="Values" Operation="ReplaceAll" ReplaceWith="[&quot;-&quot;]" ValueToFind="[&quot;/&quot;]" WhereToSearch="[Excel.Sheet(&quot;data&quot;).Range(&quot;A:A&quot;)]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:FindReplaceValueX>
+                    <ueab:WriteCellX sap2010:Annotation.AnnotationText="adds a header to column L" Cell="[Excel.Sheet(&quot;data&quot;).Cell(&quot;L1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1146,201" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[&quot;Free Cash Flow (TTM)&quot;]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:WriteCellX>
+                    <ueab:ExcelForEachRowX sap2010:Annotation.AnnotationText="Add tickers to column A of your spreadsheet.&#xA;" DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1146,1858" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;data&quot;).Range(&quot;A:A&quot;)]" SaveAfterEachRow="False">
+                      <ueab:ExcelForEachRowX.Body>
+                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                          <ActivityAction.Argument1>
+                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                          </ActivityAction.Argument1>
+                          <ActivityAction.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument2>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1112,1620" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Default="[&quot;https://finance.yahoo.com/quote/&quot;+CurrentRow(&quot;Symbol&quot;)+&quot;/cash-flow?p=&quot;+CurrentRow(&quot;Symbol&quot;)]" Name="strUrl" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Browser Edge: Yahoo Finance - Stock Market Live, Quotes, Business &amp; Finance News" sap:VirtualizedContainerService.HintSize="1050,1498" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="418543cd-7fe4-465b-957c-a73270e2e334" Version="V2">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="1016,1271" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="x:String" Name="FCFs" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NCheckState DisplayName="Check App State 'https://finance.yahoo.c…'" sap:VirtualizedContainerService.HintSize="954,1147" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="418543cd-7fe4-465b-957c-a73270e2e334" Version="V3">
+                                      <uix:NCheckState.IfExists>
+                                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="500,919" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="438,92" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[strUrl]" Version="V3" />
+                                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,453" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                            <TryCatch.Try>
+                                              <uix:NGetText sap2010:Annotation.AnnotationText="If no current TTM Free Cash Flow will grab previous year Free Cash Flow" ContinueOnError="False" DisplayName="Get Text 'Free Cash Flow'" sap:VirtualizedContainerService.HintSize="334,211" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="418543cd-7fe4-465b-957c-a73270e2e334" TextString="[FCFs]" Timeout="4" Version="V3">
+                                                <uix:NGetText.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/quote/AAPL/cash-flow?p=AAPL" DesignTimeRectangle="584, 635, 78, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'111,443,000'" FullSelectorArgument="&lt;webctrl aaname='111,443,000' tag='SPAN' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' /&gt;" Guid="6c24ecd1-9f6a-4955-afcc-34906474f32a" InformativeScreenshot="4d59b86379429e8827d529a5144d7995.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='* Cash Flow - Yahoo Finance - Yahoo Finance' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="342, 635, 88, 16" ElementType="Text" FriendlyName="'Free Cash Flow'" FullSelectorArgument="&lt;webctrl aaname='Free Cash Flow' class='Va(m)' tag='SPAN' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAUCAYAAAAA5FpZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEpSURBVFhH7ZTBagNBDEP7L7311v//uC2CCBTV9swmGweCHwxrSx4P0SFfx9DKBN7MBN7MBN7MBN7MRwb+/fN7qx7nih0Rd4HjET8dXP3u7n1/U+9pfSX/Au/Gf+gV7O6r5l6VxXbg9PDVOfaqkcojlQd0h89mHuvIUzIduKe71It6xftTga+Wab+aJZkOoh2qVTt35zL8/qonlQe2/8O1Jq5V89F9kOkZ1RvkzNt+SFaTapa91uT0X4rChXpI5SmZrmR7Kl3xnmQ6qPaByM++ytOBZ1SesppzP5tX/ZE7TrUPRG/4neje2wMH2Sx097TfqYH3JNPBat9Ki2bAU4EDLuZRKs/JZl2vPKI18J5kOoh26HGi+Yi7wIfXM4E3M4E3M4E3M4G3chx/hNKOnfuHxJgAAAAASUVORK5CYII=" SearchSteps="Selector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NGetText.Target>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </uix:NGetText>
+                                            </TryCatch.Try>
+                                            <TryCatch.Catches>
+                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ActivityAction x:TypeArguments="s:Exception">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                  </ActivityAction.Argument>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="262,71" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[FCFs]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">N/A</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                </ActivityAction>
+                                              </Catch>
+                                            </TryCatch.Catches>
+                                          </TryCatch>
+                                          <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;data&quot;).Cell(&quot;L2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="438,170" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[FCFs]" />
+                                        </Sequence>
+                                      </uix:NCheckState.IfExists>
+                                      <uix:NCheckState.IfNotExists>
+                                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,115" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </uix:NCheckState.IfNotExists>
+                                      <uix:NCheckState.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="153, 46, 1462, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'https://finance.yahoo.c…'" FullSelectorArgument="&lt;ctrl name='Yahoo Finance - Stock Market Live, Quotes, Business &amp;amp; Finance Ne*' role='pane' /&gt;&lt;ctrl name='Microsoft Edge' role='pane' /&gt;&lt;ctrl name='App bar' role='tool bar' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Yahoo Finance - Stock Market Live, Quotes, Business &amp;amp; Finance Ne*' role='pane' /&gt;&lt;ctrl name='Microsoft Edge' role='pane' /&gt;&lt;ctrl name='App bar' role='tool bar' /&gt;&lt;ctrl name='Address and search bar' role='editable text' automationid='' /&gt;" Guid="21d4bba1-f6b9-4f7a-bd1c-bf6b55015006" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABboAAAAeCAYAAADq1KhLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK4SURBVHhe7drbihsxEAVAf7V/f4NCBE3Tkkb2JER2FQx2X6Txvh728QMAAAAAAAcTdAMAAAAAcDRBNwAAAAAARxN0AwAAAABwNEE3AAAAAABHE3QDAAAAAHA0QTcAAAAAAEcTdAMAAAAAcDRBNwAAAAAARxN0AwAAAABwtGnQ/Xw+/3z7/1S/rfcej8fvp3//ZJ/+9wEAAAAArLwddM8C579lFXJ/E0E3AAAAAPDtBN2HE3QDAAAAAN/uUtDdPvsTxX6fjXr9M/ajajbbi3qvhb7xaWIQHHtxJxrNej2ad9W86kVX+qM7ej2aN3H2yjyrdmMv9pte51m1CwAAAACwa5oyjkLlKNdNtRN7VV2p+qteDk5XweosaN09W92Vz1U7zZW7unzf7Gye79ZZNVvdcaUGAAAAAHjVNGG8EjTfsVPNR1Z35dB0FajOQtads6N7cv/dvSbOqr0759FOf/aOVQ0AAAAAsGOaMK5C5ebOnWovunLPLEStAtVqPz5d3mtW86bfE59KnFV7vZdnea+5cx7t9GfvWNUAAAAAADumCeOVYPmunW7Ub67cMwtRq0B1Nn/nbDfqV/puPjOrq/vvnEc7/dk7VjUAAAAAwI5pwnglWL66E3u5jvJeV52perMQtQpUZ/Pds6Odqt/kfq9H/S7Wedbk+bt1l2dddSbX0aoGAAAAANgxTRhziNyMwubYz734GfvdrN/lWVP1ZiFqFahW+/Hp8l6Te/FcnM36WdVr4vm4U+3nXjw32h/Nq7raHfWb3RoAAAAAYMc/SRirQHrX1aD7dEJfAAAAAIA9RwTdQm4AAAAAAEaO+Y/uT9YCbiE3AAAAAMBrpKsAAAAAABxN0A0AAAAAwNEE3QAAAAAAHE3QDQAAAADA0QTdAAAAAAAcTdANAAAAAMDRBN0AAAAAABzs5+cXVY3F/FtuymIAAAAASUVORK5CYII=" InformativeScreenshot="5983be61e77bde1957aec1bb04a5793b.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Yahoo Finance - Stock Market Live, Quotes, Business &amp;amp; Finance Ne*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="60, 44, 40, 30" ElementType="Button" FriendlyName="'push button Refresh'" FullSelectorArgument="&lt;ctrl name='Yahoo Finance - Stock Market Live, Quotes, Business &amp;amp; Finance Ne*' role='pane' /&gt;&lt;ctrl name='Microsoft Edge' role='pane' /&gt;&lt;ctrl name='App bar' role='tool bar' /&gt;&lt;ctrl name='Refresh' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Yahoo Finance - Stock Market Live, Quotes, Business &amp;amp; Finance Ne*' role='pane' /&gt;&lt;ctrl name='Microsoft Edge' role='pane' /&gt;&lt;ctrl name='App bar' role='tool bar' /&gt;&lt;ctrl name='Refresh' role='push button' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAiCAYAAAAkjjtxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFUSURBVFhH7ZZRjYQwEEBxAArAASgAB6AACaAAFOEAFCABB0jgs5fXpJdj09ujLV1yST9edjPTJo/Z2Rmi4zjEfyII+yYI+yYI+yYI++Y24W3bRN/3oigKEUWRJMsyGSOnzsVxfLpnyi3CXdeJNE3l57qu3/F5nsUwDDKHODEeROVtcBbO81y0bavNKfZ9l+eqqnpWmIpSQV3uFaTrun5OmL7kp0ZEl1fQs6qn4bEepg2uVvdOrIXLsjz9wT6FtbBLL9JKuvgVnIT/6l8d3HF5WGthxhRzVpd7B3e4q8tdwVrYZKT9hHugy13BWpixxogyaQvuJElyWtWmWAsDlWqaRpvTwWRxqS44CQPbixeed5WmoqxlzuryJjgLI0rVaA9ecKZpkjFYlkWM4yjbgDMm7fMbzsIKlghSTAC1hvlO7M4Fc5vwpwjCvgnCvgnCvgnCfjnEFxwWJVnzW2NTAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NCheckState.Target>
+                                    </uix:NCheckState>
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJdSURBVFhHY0hgvPR/IPGoA0YdMHwdUKN36/+TK99R8Lq6FxjqaOaAY0ve/UcHzZZ3MNTRxAEF0tf+//71D2otBDw49w2rWpo4YEvHK6i1CDAz5hFWtVR3QBr35f9f3v2BWgsB757++p/Mil09VgfcPvYFqhUCDs55i6FmfcMLqCwE3DnxFSy+OOcpVAQBVlU8x9APw1gdMCXkAVQrBPz4+vd/psAVuHwSyyWwr5DBtIiH/xOZLv1/cfsHVAQCfnz5+z9L8CqK+cgYqwMSmS/9f33/J9QICFia/xQuj+7Ad09+gR01MQBVHAT2THmDYjY6xpkGlhagBuWz69/hctf2fYaKQsDqSkgQ3ziEGnV///77X6ZyA64PG8bpgAzeK/+/fURNTB2Od/9Xat6E8iDg57e//7OFr/5P5bwMDn5kfGAWZtpBxzgdAMLbe1Cz06nVH/7vnvQayoMAZEtAjk5hv4xiBiGM1wFFctf///mNKFBA7G+fUEOlSvvm/xyRq/8v7fj0/9+/f2A1IEdiMw8bxusAED6x4j3UKkxwedcnsJojCzGL3emRDzHMwoYJOqDR7DbUSEzQ530frObJ1e9QEQTY2IRZ8WDDBB0AwreOoKZuEHh+8wdcfs/UN1BRCABFRYs1ZsWDDRPlgMlBmPl7UfYTuDyo+N077c3/Nw9//n94/hu4UELWjw8T5YB+n/tQayHg64c//9N5ECUjJZgoB6AXPKDsiU0dOZigA2oNbkGthYC/f/79L1a4jlUtOZigA44uQs1ip9d+wKqOXExUFNASjzpg1AED7IBL/wEEb/bMxqNS/AAAAABJRU5ErkJggg==" InformativeScreenshot="51bfe70f4254dddcdea3267d8783057c.jpg" Selector="&lt;html app='msedge.exe' omit:title='Yahoo Finance - Stock Market Live, Quotes, Business &amp;amp; Finance News' /&gt;" Url="https://finance.yahoo.com/" />
+                              </uix:NApplicationCard.TargetApp>
+                            </uix:NApplicationCard>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelForEachRowX.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:ExcelForEachRowX>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+    <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" ContinueOnError="True" DisplayName="Close Window 'excel.exe US_MEGA_STOCK...'" sap:VirtualizedContainerService.HintSize="1338,116" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="2f2107b888724e0675ebc76ab689a59a" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='US_MEGA_STOCKS.xlsx - Excel' /&gt;" WaitForReady="INTERACTIVE" />
+  </Sequence>
+</Activity>
